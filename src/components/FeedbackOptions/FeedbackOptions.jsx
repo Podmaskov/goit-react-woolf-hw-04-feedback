@@ -5,12 +5,7 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <div className={styles.container}>
       {options.map(item => (
-        <button
-          type="button"
-          value={item.toLowerCase()}
-          key={item}
-          onClick={onLeaveFeedback}
-        >
+        <button type="button" key={item} onClick={() => onLeaveFeedback(item)}>
           {item}
         </button>
       ))}

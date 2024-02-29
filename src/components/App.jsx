@@ -13,14 +13,12 @@ export const App = () => {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const handelFeedback = event => {
+  const handelFeedback = value => {
     const SET_VALUE_MAP = {
-      good: setGood,
-      neutral: setNeutral,
-      bad: setBad,
+      Good: setGood,
+      Neutral: setNeutral,
+      Bad: setBad,
     };
-
-    const { value } = event.target;
 
     SET_VALUE_MAP[value](prev => ++prev);
   };
